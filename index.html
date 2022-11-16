@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <link rel="stylesheet" href="./index.css">
+    <title>Busque um CEP</title>
+    <title>CEP - Busque e encontre o Cep desejado. Amazônia e a localização de áreas desmatadas, mapa.</title>
+    <meta name="author" content="Isaque Esdras Costa" />
+    <meta name="keywords" content="cep, busca cep, meu cep, amazonia, mapa, satelite, cep cidade, cep bairro, cep rua, amazonia legal, amazonia estados,  floresta amazonia, desmatamento amazonia, google earth, google maps, maps, ver cep" />
+    <meta name="description" content="Cep encontrado mais rápido. Cep - Busque, acha para você. Amazônia, áreas desmatadas veja em vídeos, floresta Amazônia no mapa, mapa da floresta Amazônia." />
+    <style>
+        body{
+            background-image: url(./imagens/satelitemap.webp);
+            padding: 0;
+            margin: 0;
+        }
+
+        #article-amazonia{
+            background-image: url(./imagens/amazonia.webp);
+        }
+
+    </style>
+
+</head>
+<body>
+
+    
+    <main id="mainPrincipal">
+
+        
+            <header id="header-pagCep"> <img src="./imagens/mapa(1).png" alt="" width="40px" height="40" id="mapinha-no-header" loading="lazy"><div id="nome-pag">Cep - Busque</div></header>
+            <button id="lgpd" onclick="lgpd()">POLÍTICA DE PRIVACIDADE</button>
+
+            <div id="but-criar-qr">
+            <button id="but-criar-qrCode" onclick="pagQr()">Criar Qr-Code</button>
+            </div>
+
+            <div id="botao-amazonia">
+                <button id="but-amazonia" onclick="butAmazonia()">Amazônia - Satélite</button>
+            </div>
+
+        <h1 id="tex-pag">Busque um Cep, saiba sua Localização pelo Mapa e ainda se precisar, 
+            crie um Qr-Code aqui mesmo no site!</h1>
+            
+        <article id="article-central">
+            <section id="section-central">
+   
+            <div id="div-cepInput">
+                <h2 id="buscar-cep">Buscar CEP:</h2>
+                <input type="text" id="input-cep" placeholder="Digite o CEP...">
+                <button id="but-input"> <img src="./imagens/search.png" alt="" width="25px" height="25px" loading="lazy">.</button>
+            </div>
+            </section>
+        </article>
+        <article id="article-informacoes">
+            
+            <section id="section-informacoes">
+            <div id="div-infoCep">
+
+               
+                
+                <h3 id="logradouro"></h3>
+
+                
+                <h3 id="bairro"></h3>
+
+                
+                <h3 id="cidade"></h3>
+
+                
+                <h3 id="estado"></h3>
+
+              
+            </div>
+        </section>
+
+        <h2 id="longlati"></h2>
+        <div id="map"></div>
+
+        </article>
+
+        <article id="article-videos">
+            <header id="hearder-videos-article-videos">Info Mapas, Gps, Satélite - Sobre Localizações  <img src="./imagens/satelite.png" alt="" width="64px" height="64px" loading="lazy"></header>
+            
+            <section id="section-videos-parte-um">
+
+                <div id="video-um">
+                    <header style="color: white; font-size: 20pt; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; width: 320px; text-align: justify;"> <strong>GPS PARA MOTORISTAS, COM GOOGLE MAPS.</strong></header>
+                    <img src="./imagens/imagemUm.webp" alt="" width="380px" height="280px" style="cursor: pointer;" id="imagem-video-um" onclick="videoUm()" loading="lazy">
+                    <p id="text-video-um">O Google Maps é hoje o melhor mapa para quem precisa de um guia para se situar pela Cidade, o Google Maps
+                    oferece aos Motoristas, a facilidade de se guiar no trânsito das capitais, observando em tempo real o tráfego das regiões por onde irá passar. Um trunfo desse avanço tecnológico é a capacidade com que o sistema cria linhas no Mapa para indicar se em determinado ponto da cidade está engarrado ou não, ou seja,
+                você consegue ter um norte melhor de por onde ir para se livrar de congestionamentos das rodovias. </p>
+                </div>
+
+                <div id="video-dois">
+                    <header style="color: white; font-size: 20pt; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; width: 320px;  text-align: justify;" > <strong>LOCALIZAÇÃO EM TEMPO REAL COM O WHATS-APP.</strong></header>
+                    <img src="./imagens/imagemDois.webp" alt="" width="380px" height="280px" style="cursor: pointer;" id="imagem-video-dois" onclick="videoDois()" loading="lazy" >
+                    <p id="text-video-dois"> O WhatsApp possui atualmente a revolucionária capacidade tecnológica de saber onde estamos e nos permitir
+                    acessar essa informação para que nos encontremos onde quer que estejemos. Essa funcionalidade é simplificada para o usuário, bastando que esse usuário apenas selecione as opções corretas para usurfruir da vantagem. Existe ainda a opção a mais fornecida pelo WhatsApp que é a opção de podermos enviar essa nossa localização atual para 
+                    qualquer outra pessoa que também tenha o Aplicativo.</p>
+                </div>
+
+                <div id="video-tres">
+                    <header style="color: white; font-size: 20pt; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; width: 320px;  text-align: justify;"> <strong>GPS DO GOOGLE MAPS, COMO USAR.</strong></header>
+                    <img src="./imagens/imagemTres.webp" alt=""width="380px" height="280px" style="cursor: pointer;" id="imagem-video-tres" onclick="videoTres()" loading="lazy">
+                    <p id="text-video-tres"> Após a pesquisa do nosso destino o Satélite automaticamente mapeia a área e traça nossa Rota, muitas vezes criando uma linha flexível
+                         que indica o caminho a ser percorrido até o destino e uma seta que marca nossa localização enquanto avançamos no mapa. Incrivelmente, "uma voz que não é a de um Anjo", nos guiando pelo caminho, essa voz é de uma IA, Inteligência Artificial contida na tecnologia do Maps do Google. Além disso, ainda podemos contar com três linhas
+                         indicativas no Mapa, cada uma com uma cor, indicando a situação do tráfego. </p>
+                </div>
+
+            </section>
+
+            <section id="section-videos-parte-dois">
+
+                <div id="video-um-parte-dois">
+                    <header style="color: white; font-size: 20pt; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; width: 320px;  text-align: justify;"> <strong>COMO PESQUISAR UM DESTINO NO GPS</strong></header>
+                    <img src="./imagens/imagemQuatro.webp" alt="" width="380px" height="280px" style="cursor: pointer;" id="imagem-video-quatro" onclick="videoQuatro()" loading="lazy">
+                    <p id="text-video-quatro">O GPS do Google Maps foi desenvolvido para que nós usuários pudessemos com muita praticidade pesquisar tanto nossa localização atual, como também pudessemos pesquisar
+                     a localização de nosso Destino, bastando que selecionemos a opção pesquisar e digitemos o nome do lugar para onde queremos ir. A pesquisa é muito rápida e nos é mostrado em seguida o nosso ponto de partida e o nosso ponto de destino, além de toda a rota que iremos percorrer.</p>
+                </div>
+
+                <div id="video-dois-parte-dois">
+                    <header style="color: white; font-size: 20pt; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; width: 320px;  text-align: justify;" onclick="videoCinco()"> <strong>LOCALIZAÇÃO ATUAL COM WHATS-APP</strong></header>
+                    <img src="./imagens/imagemCinco.webp" alt="" width="380px" height="280px" style="cursor: pointer;" id="imagem-video-cinco" onclick="videoCinco()" loading="lazy">
+                    <p id="text-video-cinco">Diferente da Localização em tempo real, a Localização atual no WhatsApp não nos mostra em estado de movimento como no caso da localização em tempo real. A localização 
+                        atual no WP nos mostra em um ponto fixo a partir de onde vimos o mapa ou enviamos essa localização para uma outra pessoa via WhatsApp, ela é para aquele momento em que queremos saber onde estamos ou que outra pessoa saiba onde estamos, mas representando ao mesmo tempo uma certa certeza de que não saíremos dessa localização atual e que não nos movimentaremos 
+                        tão cedo para algum outro lugar, serve para nos mostrar fixos em um determinado local. </p>
+                </div>
+
+                <div id="video-tres-parte-dois">
+                    <header style="color: white; font-size: 20pt; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; width: 320px;  text-align: justify;"><strong>OS TRÊS TIPOS DE MAPA DO GPS DO GOOGLE</strong></header>
+                    <img src="./imagens/imagemSeis.webp" alt="" width="380px" height="280px" style="cursor: pointer;" id="imagem-video-seis" onclick="videoSeis()" loading="lazy">
+                    <p id="text-video-seis">Eu também não sabia, mas o Google têm (3) três tipos de Mapa. O primeiro é o Mapa Padrão, o segundo é o Mapa Satélite e o terceiro é o Mapa Relevo. Claro que cada um com
+                    sua particularidade, mas de longe o que mais chama atenção é o mapa satélite, ele mostra com muita nitidez, Rios, Lagoas, Áreas desmatadas, Florestas, Parques e ruas para quem está vendo o mapa, trazendo uma sensação de liberdade visual encantadora, fica mais fácil identificar o que é um morro, uma planície e inclinações naturais, mas mais que isso, 
+                    traz uma certa suavidade na hora de se guiar, enquanto  se está dirigindo e é preciso chegar a algum lugar.</p>
+                </div>
+
+            </section>
+
+        </article>
+
+        <article id="article-amazonia">
+            <header style="color: white;" id="header-amazonia"> <strong>Amazônia - Via Satélite</strong></header>
+            
+            <section id="section-amazonia-um">
+                <header id="header-amazonia-um">(1) Sátelite detectando áreas desmatadas durante (36) anos.</header>
+                <div id="div-amazonia-um">
+                    
+                    <iframe src="./imagens/videodesmatamentoum.mp4" frameborder="20" title="iframeUm" width="500px" height="280px"></iframe>
+                    <p id="paragrafo-amazonia-um">Com o avanço da Tecnologia de Satélite, os especialistas ambientais e os ativistas ambientais, como também os Governos, passaram a sentir a necessidade de acompanhar os avanços do desmatamento das florestas do Planeta. O Brasil é hoje de perto ou de longe o país mais observado no quesito florestal, por possuir a maior parte da floresta amazônica
+                    na América do Sul e pelo fato de ser considerado esse grande acervo florestal, um dos Pulmões do Planeta Terra, hoje sem dúvidas o maior desafio da humanidade é reduzir o desmatamento e emissão de gases capazes de aumentar a temperatura da terra e causar como resultado, desastres climáticos que sentencia a morte todos os anos milhões de pessoas no mundo. Esse video é um 
+                    acompanhamento periódico do desmatamento da região amazônica realizado dentro do período de (36) anos através de registros de satélite das expansões anuais do desmatamento, como mostra o vídeo.
+                    </p>
+                </div>
+                <header id="header-amazonia-dois"> <p id="header-interno-pdois">(2) Satélite detectando áreas sendo desmatadas atualmente.</p></header>
+                <div id="div-amazonia-dois">
+                    <p id="paragrafo-amazonia-dois">A imagem do vídeo foi capturada pelo satélite e fornecida pelo Google Earth para uma maior compreensão das áreas afetadas na Amazônia, essa tecnologia mapeia toda a área e procura por pontos onde está ocorrendo desmatamentos. As áreas que vemos nesse video, já correspondem a mais de dois campos de futbol em área desmatada, somente nesse região podemos
+                    notar (7) pontos de desmatamento. É preciso lembrar ainda, que, nem todos os pontos desmatados são ilegáis, algumas área são permitadas por lei, para que possam ser desmatadas para o plantio agrícola e criação bovina.
+                    </p>
+                    <iframe src="./imagens/amazoniadois.mp4" frameborder="20" title="iframeDois" width="500px" height="280px"></iframe>
+                </div>
+                
+                <div id="div-amazonia-demarcacao">
+                    <header id="header-demarcacao-um">Satélite e demarcação da Amazônia</header>
+                    <div id="item-demarcacao-amazonia">
+                    <img src="./imagens/demarcacao.webp" alt="" srcset="" width="400px" height="350px" loading="lazy">
+                    <p id="paragrafo-amazonia-demarcacao">Essa imagem do Globo Terrestre, mostra a demarcação da amazônia quando vista de cima através da captura de satélite. Muita gente acredita que a Amazônia ocupa somente o Brasil, na verdade o Brasil têm a maior parte da Floresta Amazônica, mas outros países como Perú, Colombia, Venezuela, Equador e Bolívia também possuem parte dessa floresta, 
+                    só que, em menor parte. Quando se trata do Brasil, a Amazônia foi reconhecida como floresta nativa de (9) estados brasileiros, possuindo (5) milhões de quilômetros quadrados.  </p>
+                    </div>
+                </div>
+
+            </section>
+
+        </article>
+
+        <article id="article-qr-centra">
+
+          
+            <section id="section-qr">
+                <header id="header-qr">Cole seu Link e Gere seu Qr-Code !</header>
+            </section>
+
+            <aside id="aside-qr-code">
+                Esse é um Gerador de Qr-Code, com ele você cria um código com um significado único
+                e só seu, você pode printar e enviar para quem você quiser ! Crie agora mesmo...
+            </aside>
+
+            <section id="section-qr-central">
+                <img src="" alt="" id="qr-code-image">
+                <input type="text" id="input-qr" placeholder="Cole o link aqui...">
+                <button id="but-qr-code" onclick="gerarQr()">GERAR</button>
+            </section>
+            
+            <footer id="footer-pag">Copyright © 2022. Todos os Direitos Reservados</footer>
+        </article>
+
+    </main>
+
+    <script defer src="./index.js"></script>
+
+    <script defer src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+    crossorigin="anonymous"></script>
+
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+    integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+    crossorigin="anonymous"/>
+
+    
+    
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+</body>
+</html>
+
+
+    
+
+       
+        
+
+   
