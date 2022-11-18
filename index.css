@@ -57,11 +57,11 @@
 }
 
 #header-pagCep{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     padding: 10px;
     display: flex;
     margin: 0%;
-    color: rgb(255, 255, 255);
+    color: rgb(69, 69, 198);
     font-family: fantasy;
     font-size: 20pt;
 }
@@ -550,7 +550,7 @@ body{
 #hearder-videos-article-videos{
     color: white;
     font-size: 36pt;
-    background: linear-gradient(rgb(101, 123, 194), rgb(72, 63, 158));
+    background: linear-gradient(rgb(101, 123, 194), rgb(42, 30, 210));
     padding: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
