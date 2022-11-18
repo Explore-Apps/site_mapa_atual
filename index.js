@@ -24,44 +24,6 @@ butt_cep.addEventListener('click', () =>{
     
 } )
 
-
-let infoCordenadas = document.getElementById('longlati')
-
-if (confirm('Você autoriza nosso site a ver sua localização e mostrá-la a você no mapa ?')) {
-    function erro(error) {
-        console.log(error)
-    }
-    
-    function sucesso(position) {
-      
-       infoCordenadas.innerHTML = `Latitude: ${position.coords.latitude} <br> Longitude: ${position.coords.longitude}`
-    
-       var map = L.map('map').setView([position.coords.latitude, position.coords.longitude], 13);
-    
-       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-    
-       L.marker([position.coords.latitude,  position.coords.longitude]).addTo(map)
-        .bindPopup('Sua Localização')
-        .openPopup();
-    }
-    
-    
-    var posicaoUsuario = navigator.geolocation.watchPosition(sucesso, erro,{
-    
-        enableHighAccuracy:true,
-        timeout: 6000
-        
-    })
-}else{alert('Certo, sua Localização não será coletada.')}
-
-
-
-
-//navigator.geolocation.clearWatch(posicaoUsuario)
-
-
 gerarQr =()=>{
     var inpute = document.getElementById('input-qr').value
     var apiQrCode = `https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl=${inpute}`
