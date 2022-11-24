@@ -66,3 +66,8 @@ videoCinco = () =>{
 videoSeis = () =>{
     window.location.href = 'https://www.youtube.com/watch?v=1RkUDzYeGjw'
 }
+
+mapadoamor = () =>{
+    window.location.href = './mapadoamor.html'
+}
+
