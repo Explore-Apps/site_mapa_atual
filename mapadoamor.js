@@ -5,7 +5,3 @@ contatoMapa = () =>{
 inicioMapa = () =>{
     window.location.href = './index.html'
 }
-
-mensagemObrigado = () =>{
-    window.location.href = './mapaObrigado.html'
-}
