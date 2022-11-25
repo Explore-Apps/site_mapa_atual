@@ -92,6 +92,8 @@ input{
     font-weight: bolder;
     cursor: pointer;
     border: none;
+    border-radius: 6px;
+    margin-top: 5px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -181,6 +183,14 @@ h3{
 
     }
 
+    #but-inicio{
+        font-size: 17pt;
+    }
+
+    #but-contato{
+        font-size: 17pt;
+    }
+
     p{
         width: 380px;
         font-size: 19pt;
@@ -188,6 +198,7 @@ h3{
 
     h1{
         font-size: 44pt;
+        margin: 16px;
     }
 
     header{

@@ -8,6 +8,10 @@
     height: 50vh;
 }
 
+#nome-pag{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 #input-cep{
     
    
@@ -159,9 +163,9 @@ h3{
     }
 
     #nome-pag{
-        font-size: 18pt;
-        display: block;
-       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       font-size: 18pt;
+       display: block;
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
        font-size: 25pt;
     }
 
