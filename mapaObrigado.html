@@ -3,10 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <title>Mensagem Enviada</title>
+    <style>
+        img{
+            width: 500px;
+            height: auto;
+        }
+
+        div{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        header{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: rgba(255, 247, 0, 0.605);
+            width: 100%;
+        }
+
+        h1{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 10px;
+            letter-spacing: 3px;
+        }
+
+        button{
+            background: rgb(235, 235, 87);
+            color: rgb(1, 1, 0);
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 13pt;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: yellow;
+        }
+        
+    </style>
 </head>
 <body>
-    <h1>Obrigado</h1>
+    <header><h1>Sua Mensagem foi Recebida!</h1></header>
+
+    <main>
+        <article>
+            <section>
+                <div>
+                    <img src="./imagens/mensagemRecebida.svg" alt="" id="mensagemRecebida">
+                </div>
+            </section>
+            <div>
+                <button>VOLTAR</button>
+            </div>
+        </article>
+    </main>
 </body>
 </html>
