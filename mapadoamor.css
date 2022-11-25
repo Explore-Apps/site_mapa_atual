@@ -40,12 +40,8 @@ h1{
 
 header{
     display: flex;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 span{
