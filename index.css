@@ -98,7 +98,7 @@
     color: white;
     padding: 30px;
     animation: titulo 2s;
-   
+    text-align: left;
 }
 
 #div-infoCep{
