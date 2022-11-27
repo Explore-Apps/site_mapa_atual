@@ -99,6 +99,7 @@
     padding: 30px;
     animation: titulo 2s;
     text-align: left;
+    text-align: justify;
 }
 
 #div-infoCep{
