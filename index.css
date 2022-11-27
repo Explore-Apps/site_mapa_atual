@@ -120,8 +120,12 @@
 
 
 #buscar-cep{
-    padding: 5px;
+    padding: 0px;
     color: white;
+    display: flex;
+    justify-content: space-around;
+    font-size: 36pt;
+    margin: 5px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
