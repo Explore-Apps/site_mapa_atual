@@ -21,6 +21,8 @@
     width: 350px;
     outline: none;
     font-size: 19pt;
+    margin: 5px;
+    margin-top: 5px;
 }
 
 #but-input{
@@ -122,6 +124,8 @@
 #buscar-cep{
     padding: 0px;
     color: white;
+    background-color: rgba(40, 22, 22, 0.671);
+    border-radius: 9px;
     display: flex;
     justify-content: space-around;
     font-size: 36pt;
