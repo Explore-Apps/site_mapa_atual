@@ -1,5 +1,5 @@
 # Um ano para arquivos de imagem
-<filesMatch ".(jpg|jpeg|png|gif|ico)$">
+<filesMatch ".(jpg|jpeg|png|gif|webp)$">
 Header set Cache-Control "max-age=31536000, public"
 </filesMatch>
 
