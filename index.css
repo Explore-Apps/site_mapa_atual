@@ -363,8 +363,8 @@ body{
     text-align: justify;
     background-color: rgba(12, 6, 6, 0.58);
     border-radius: 8px;
-    padding: 5px;
     color: white;
+    padding: 20px;
 }
 
 
@@ -385,12 +385,14 @@ body{
 }
 
 #paragrafo-amazonia-dois{
-    background-color: rgba(12, 6, 6, 0.45);
+    background-color: rgba(12, 6, 6, 0.58);
+    padding: 5px;
     color: white;
     border-radius: 8px;
     width: 700px;
     padding: 5px;
     text-align: justify;
+    padding: 20px;
 }
 
 #div-amazonia-dois{
