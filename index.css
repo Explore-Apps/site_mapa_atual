@@ -361,9 +361,10 @@ body{
 #paragrafo-amazonia-um{
     width: 700px;
     text-align: justify;
-    background-color: white;
+    background-color: rgba(12, 6, 6, 0.58);
     border-radius: 8px;
     padding: 5px;
+    color: white;
 }
 
 
@@ -384,7 +385,8 @@ body{
 }
 
 #paragrafo-amazonia-dois{
-    background-color: white;
+    background-color: rgba(12, 6, 6, 0.45);
+    color: white;
     border-radius: 8px;
     width: 700px;
     padding: 5px;
