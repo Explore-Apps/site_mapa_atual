@@ -71,3 +71,6 @@ mapadoamor = () =>{
     window.location.href = './mapadoamor.html'
 }
 
+verificarincendio = () =>{
+    window.location.href = 'https://www.google.com.br/maps/@-13.7407473,-50.0563623,6053820m/data=!3m1!1e3!5m1!1e8'
+}
