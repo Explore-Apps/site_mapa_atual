@@ -8,6 +8,7 @@ section{
     height: auto;
 }
 
+
 p{
     text-align: justify;
     font-size: 19pt;
@@ -20,18 +21,22 @@ p{
 
 
 h2{
-    padding: 30px;
+    padding: 10px;
     font-size: 28pt;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 850px;
     height: auto;
     text-align: justify;
+    border-radius: 8px;
+    margin-left: 5px;
+    background-color: aliceblue;
+    color: black;
 }
 
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.323);
     color: rgb(0, 0, 0);
-    margin: 1%;
+    margin: 0;
 }
 
 
@@ -44,7 +49,6 @@ h1{
 header{
     display: flex;
     justify-content: center;
-    margin-top: 10px;
 }
 
 span{
@@ -65,13 +69,15 @@ span{
     
 }
 
-#div-contato{
-    border: 1px solid black;
-}
-
 #h3-contato{
     width: 400px;
     padding: 10px;
+}
+
+#div-but-inicio{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 input{
@@ -84,8 +90,12 @@ input{
     font-size: 14pt;
 }
 
+img{
+    border-radius: 50%;
+}
+
 #but-form{
-    background-color: rgb(148, 39, 251);
+    background-color:#FC814A;
     color: white;
     font-size: 14pt;
     font-weight: bolder;
@@ -97,7 +107,7 @@ input{
 }
 
 #but-form:hover{
-    background-color: rgb(115, 45, 182);
+    background-color: darkblue;
 }
 
 textarea{
@@ -126,38 +136,50 @@ h3{
     justify-content: left;
     justify-items: left;
     background-color: white;
-    width: 100%;
+    width: 96%;
     height: auto;
-    
+    border: 1px solid black;
+    margin-left: 7px;
 }
 
 #but-inicio{
     background-color: transparent;
-    color: white;
+    color: #FC814A;
     border: none;
     cursor: pointer;
-    font-size: 19pt;
+    font-size: 17pt;
     font-weight: bolder;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
 #but-contato{
-    background-color: transparent;
+    background-color:  #fc814a;
     color: white;
-    border: none;
+    border: 1px solid white;
+    border-radius: 35px;
     cursor: pointer;
-    font-size: 19pt;
+    font-size: 17pt;
     font-weight: bolder;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+}
+
+#but-contato:hover{
+    background-color: orange;
 }
 
 #header-superior{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: blueviolet;
+    justify-content: left;
+    background-color: darkblue;
+    padding: 6em;
+    border-bottom: 2px solid #FC814A;
+}
+
+#footer-finish{
+    background-color: darkblue;
 }
 
 @media screen and (max-width:680px) {
@@ -242,7 +264,7 @@ h3{
     }
 
     #but-form{
-        background: rgb(162, 12, 231);
+        background: #FC814A;
         color: white;
         font-size: 16pt;
         font-weight: bolder;
@@ -269,5 +291,14 @@ h3{
         padding: 5px;
         width: 380px;
         font-size: 19pt;
+    }
+
+    #header-superior{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: darkblue;
+        padding: 6em;
     }
 }

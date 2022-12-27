@@ -5,7 +5,7 @@
 
 #article-central{
     width: 100%;
-    height: 50vh;
+    height: 55.8vh;
 }
 
 #nome-pag{
@@ -45,20 +45,19 @@
 }
 
 #but-criar-qrCode{
-    background-color: #24ff5f;
-    color: rgb(0, 0, 0);
+    background-color: transparent;
+    color: blue;
     border-radius: 9px;
     border: none;
     padding: 6px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
     font-weight: bolder;
     cursor: pointer;
     font-size: 12pt;
-    width: 200px;
 }
 
 #but-criar-qrCode:hover{
-    background-color: #04eb41;
+    background-color: aliceblue;
 }
 
 #mapa-do-amor{
@@ -68,30 +67,42 @@
 }
 
 #but-mapa-amor{
-    background-color: #24ff5f;
-    color: rgb(0, 0, 0);
+    background-color: transparent;
+    color: blue;
     border-radius: 9px;
     border: none;
     padding: 6px;
     font-family: monospace;
     font-weight: bolder;
     cursor: pointer;
-    width: 200px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
     font-size: 12pt;
 
 }
 
-
+#but-mapa-amor:hover{
+    background-color: aliceblue;
+}
 
 #header-pagCep{
     background-color: rgb(255, 255, 255);
     padding: 10px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     margin: 0%;
     color: rgb(69, 69, 198);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20pt;
+}
+
+#juncao-de-botoes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: right;
+    background-color: white;
 }
 
 #tex-pag{
@@ -216,21 +227,21 @@ body{
 
 #but-qr-code{
     margin-top: 7px;
-    border: 1px solid rgb(19, 128, 5);
-    background-color: #04eb41;
-    color: rgb(0, 0, 0);
-    border-radius: 9px;
+    background-color: transparent;
+    color: blue;
+    border: none;
+    border-radius: 6px;
     padding: 9px;
     font-weight: bold;
     cursor: pointer;
     width: 120px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 15pt;
+    font-family: sans-serif;
+    font-size: 17pt;
 }
 
 #but-qr-code:hover{
-    background: #5aa810;
-    color: white;
+    background: aliceblue;
+    color: steelblue;
 }
 
 #input-qr{
@@ -433,7 +444,10 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
 
+#footer-final{
+    background-color: blue;
 }
 
 #paragrafo-amazonia-demarcacao{
@@ -497,21 +511,20 @@ body{
 }
 
 #but-amazonia{
-    background-color: #24ff5f;
-    color: rgb(0, 0, 0);
+    background-color:transparent;
+    color: blue;
     border-radius: 9px;
     border: none;
     padding: 6px;
     font-family: monospace;
     font-weight: bolder;
     cursor: pointer;
-    width: 200px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
     font-size: 12pt;
 }
 
 #but-amazonia:hover{
-    background-color: #04eb41;
+    background-color: aliceblue;
 }
 
 #text-video-um{
