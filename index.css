@@ -235,7 +235,7 @@ body{
     font-weight: bold;
     cursor: pointer;
     width: 120px;
-    font-family: sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 17pt;
 }
 
@@ -447,7 +447,7 @@ body{
 }
 
 #footer-final{
-    background-color: blue;
+    background-color: darkblue;
 }
 
 #paragrafo-amazonia-demarcacao{

@@ -182,6 +182,14 @@ h3{
     background-color: darkblue;
 }
 
+#titulo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 @media screen and (max-width:680px) {
 
     section{
@@ -300,5 +308,9 @@ h3{
         justify-content: center;
         background-color: darkblue;
         padding: 6em;
+    }
+
+    #titulo{
+       margin-left: 30px;
     }
 }
